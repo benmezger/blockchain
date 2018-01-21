@@ -47,7 +47,7 @@ class Blockchain(object):
             - amount: <float> amount the sender is sending to a receiver
         :return: The index of a block that holds this tx
         """
-        self.current_tx.append(**kwargs)
+        self.current_tx.append(kwargs)
         return self.last_block['index'] + 1 # return the next block to be mined.
 
     @staticmethod
