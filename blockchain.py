@@ -58,7 +58,7 @@ class Blockchain(object):
         :param block: <dict> a block
         :return: the sha256 of block.
         """
-        block = json.dumps(block, sorted_keys=True).encode()
+        block = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(block).hexdigest()
 
     def pow(self, last_p :int) -> int:
